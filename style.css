@@ -401,29 +401,53 @@ section {
   margin-left: auto;
 }
 
-/* Responsive Grid for Projects/Education */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.col {
-  flex: 1 0 0%;
-}
-
-@media (max-width: 768px) {
-
-  .col-md-6,
-  .col-md-4 {
-    flex: 0 0 100%;
-    /* Stack cards 1 per row on mobile */
-    max-width: 100%;
+/* --- RESPONSIVE FIX (CP, TABLET, LAPTOP) --- */
+@media (max-width: 991px) { 
+  .custom-nav .container {
+    display: flex !important;
+    flex-direction: row !important; /* Siguroha nga straight line */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Pugngan ang pag-naog sa menu */
+    padding: 0 10px;
   }
-}
 
-@media (max-width: 768px) {
+  .logo-btn {
+    font-size: 1.4rem; /* Gi-adjust para naay space ang links */
+    white-space: nowrap;
+    flex-shrink: 0; /* Dili pislaton ang logo */
+    margin-right: 10px;
+  }
+
+  /* Para ang menu links mag-straight gihapon sa kilid sa logo */
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important; 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
   .nav-link {
-    font-size: 0.9rem;
-    padding: 10px;
+    font-size: 0.65rem; /* Gamay nga font para maigo tanan sa usa ka line */
+    padding: 5px 4px !important;
+    white-space: nowrap;
   }
+
+  /* I-hide ang burger menu/toggler kung gusto nimo straight tanan links */
+  .navbar-toggler {
+    display: none !important;
+  }
+
+  /* Siguroha nga dili mag-vertical ang collapse */
+  .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+}
+
+/* Extra small fix para sa gagmay kaayo nga CP */
+@media (max-width: 380px) {
+  .logo-btn { font-size: 1.2rem; }
+  .nav-link { font-size: 0.55rem; padding: 2px !important; }
 }
