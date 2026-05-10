@@ -5,23 +5,39 @@ body {
   font-family: 'Archivo Black', sans-serif;
   margin: 0;
   padding: 0;
-  
 }
 
 
 /* Navbar & Logo */
-
 .custom-nav {
   background-color: #000000;
   padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  min-height: 60px;
 }
 
+.custom-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* --- LOGO --- */
 .logo-btn {
-  font-size: 2rem;
+  display: flex !important;
+  align-items: center;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
   font-weight: bold;
   text-decoration: none;
   color: white !important;
-  transition: transform 0.3s;
+  overflow: visible;
 }
 
 .logo-btn:hover {
@@ -30,7 +46,7 @@ body {
 
 .red-text {
   color: #ff0000;
-  /* Copy of the J color */
+  display: inline-block;
 }
 
 .nav-link {
@@ -401,53 +417,60 @@ section {
   margin-left: auto;
 }
 
-/* --- RESPONSIVE FIX (CP, TABLET, LAPTOP) --- */
-@media (max-width: 991px) { 
+/* --- MOBILE & TABLET STRAIGHT LINE FIX --- */
+@media (max-width: 991px) {
   .custom-nav .container {
     display: flex !important;
-    flex-direction: row !important; /* Siguroha nga straight line */
-    justify-content: space-between;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important; /* Pugngan ang pag-naog sa menu */
+    justify-content: space-between !important;
     align-items: center;
-    flex-wrap: nowrap; /* Pugngan ang pag-naog sa menu */
-    padding: 0 10px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
-  .logo-btn {
-    font-size: 1.4rem; /* Gi-adjust para naay space ang links */
-    white-space: nowrap;
-    flex-shrink: 0; /* Dili pislaton ang logo */
-    margin-right: 10px;
+  /* I-force ang menu nga mag-horizontal pirme */
+  .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto !important;
+    flex-grow: 1;
+    justify-content: flex-end;
   }
 
-  /* Para ang menu links mag-straight gihapon sa kilid sa logo */
   .navbar-nav {
     display: flex !important;
-    flex-direction: row !important; 
-    margin: 0;
-    padding: 0;
+    flex-direction: row !important; /* Straight line horizontal */
+    margin: 0 !important;
+    padding: 0 !important;
     list-style: none;
   }
 
+  /* Gamayan ang font ug spacing para maigo tanan sa CP */
   .nav-link {
-    font-size: 0.65rem; /* Gamay nga font para maigo tanan sa usa ka line */
-    padding: 5px 4px !important;
-    white-space: nowrap;
+    font-size: 10px !important; /* Gamay nga font para sa Achievement */
+    padding: 5px 3px !important; /* Sikit-sikiton gamay */
+    white-space: nowrap !important;
+    text-transform: uppercase;
   }
 
-  /* I-hide ang burger menu/toggler kung gusto nimo straight tanan links */
+  .logo-btn {
+    font-size: 1.2rem !important;
+    margin-right: 5px;
+  }
+
+  /* I-tago ang burger menu icon kay i-straight man nato */
   .navbar-toggler {
     display: none !important;
   }
-
-  /* Siguroha nga dili mag-vertical ang collapse */
-  .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
-  }
 }
 
-/* Extra small fix para sa gagmay kaayo nga CP */
-@media (max-width: 380px) {
-  .logo-btn { font-size: 1.2rem; }
-  .nav-link { font-size: 0.55rem; padding: 2px !important; }
+/* Fix para sa gagmay kaayo nga screen (iPhone SE/Small Androids) */
+@media (max-width: 360px) {
+  .nav-link {
+    font-size: 8.5px !important;
+    letter-spacing: -0.2px;
+  }
+  .logo-btn {
+    font-size: 1rem !important;
+  }
 }
