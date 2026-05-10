@@ -1,0 +1,429 @@
+body {
+  background-color: #333333;
+  /* Background from image */
+  color: #ffffff;
+  font-family: 'Archivo Black', sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+/* Navbar & Logo */
+
+.custom-nav {
+  background-color: #000000;
+  padding: 10px 0;
+}
+
+.logo-btn {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white !important;
+  transition: transform 0.3s;
+}
+
+.logo-btn:hover {
+  transform: scale(1.1);
+}
+
+.red-text {
+  color: #ff0000;
+  /* Copy of the J color */
+}
+
+.nav-link {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ff0000 !important;
+}
+
+/* --- NAVIGATION STICKY --- */
+.custom-nav {
+  background-color: #000000;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+
+}
+
+/* --- HOME SECTION CENTERING --- */
+#home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+}
+
+
+.Clint-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.text-description {
+  color: #ffffff;
+  font-size: 0.95rem;
+  max-width: 600px;
+  line-height: 1.8;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+/* Siguroha nga ang html naay smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Dugang: Para dili "maputol" ang sections inig click sa nav */
+section {
+  scroll-margin-top: 70px;
+}
+
+/* Image Style */
+.profile-circle {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #555;
+  background: #444;
+}
+
+/* About Me Specific Styles */
+.about-section {
+  padding: 100px 0;
+  background-color: #333333;
+  /* Matches the image background */
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: justify;
+  /* Matches the clean edges in the image */
+}
+
+.highlight-name {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.4rem;
+  margin-right: 10px;
+  display: inline;
+  /* Keeps it on the same line as the paragraph start */
+}
+
+/* Updated section title to match the bold block style */
+.section-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+}
+
+/* Smooth hover effect for the text container */
+.about-content:hover {
+  color: #f0f0f0;
+  transition: color 0.3s ease;
+}
+
+.edu-box {
+  background-color: #d9d9d9;
+  /* Light grey background from image */
+  color: #000;
+  border-radius: 5px;
+  height: 100%;
+  border: none;
+}
+
+.edu-box p {
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+  line-height: 1.2;
+}
+
+.red-text {
+  color: #ff0000;
+  /* Red color for the details */
+}
+
+.edu-logo {
+  width: 50px;
+  /* Adjust size as needed */
+  height: auto;
+}
+
+/* Ensure the titles in the boxes stand out */
+.edu-box h5 {
+  font-family: 'Archivo Black', sans-serif;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* JavaScript Information Modal */
+.info-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* Project Section Styles */
+.project-section {
+  background-color: #333333;
+}
+
+.project-card {
+  background-color: #d9d9d9;
+  /* Light gray box color from image */
+  color: #000000;
+  padding: 20px;
+  height: 100%;
+  min-height: 450px;
+  /* Ensures all boxes are the same size */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*  Hover Effect */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+}
+
+.project-img-wrapper {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.project-img-wrapper img {
+  max-height: 100%;
+  border-radius: 4px;
+}
+
+.project-desc p {
+  font-size: 0.75rem;
+  /* Small blocky text from image */
+  line-height: 1.4;
+  text-align: justify;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /* Standard sans-serif for readability */
+}
+
+/* Matching the Archivo Black headers */
+.project-section .section-title {
+  font-family: 'Archivo Black', sans-serif;
+  color: #ffffff;
+}
+
+
+/* Achievement Section */
+.achievement-section {
+  background-color: #333;
+  /* Dark gray background */
+  color: white;
+  border-bottom: 4px solid #00aaff;
+  /* Blue accent line */
+  padding: 60px 0;
+}
+
+.achievement-text {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.achievement-img {
+  border: 1px solid #555;
+  transition: transform 0.3s ease;
+}
+
+.achievement-img:hover {
+  transform: scale(1.05);
+}
+
+.quote-text {
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+
+    /* Social Footer */
+
+.social {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.social a {
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  background-color: #333; 
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  transition: 0.3s ease;
+}
+
+.social a:hover {
+  transform: translateY(-5px);
+}
+
+.social a:nth-child(1):hover {
+  background-color: #1877f2;
+  /* Facebook */
+}
+
+.social a:nth-child(2):hover {
+  background-color: #e4405f;
+  /* Instagram */
+}
+
+.social a:nth-child(3):hover {
+  background-color: #000000;
+  /* Google */
+}
+
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
+/* For Tablets and smaller (Laptops/Tablets) */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .profile-circle {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* For Mobile Phones (CP) */
+@media (max-width: 768px) {
+  #home {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .Clint-text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .text-description {
+    font-size: 0.85rem;
+    padding: 0 15px;
+  }
+
+  .profile-circle {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+  }
+
+  .about-content {
+    font-size: 0.9rem;
+    padding: 0 20px;
+    text-align: left;
+    /* Justified text is hard to read on small screens */
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .logo-btn {
+    font-size: 1.5rem;
+  }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+  .project-card {
+    min-height: auto;
+    /* Let it grow naturally */
+    margin-bottom: 20px;
+  }
+
+  .edu-box {
+    margin-bottom: 15px;
+  }
+}
+
+/* Ensure containers don't overflow on small screens */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Responsive Grid for Projects/Education */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+@media (max-width: 768px) {
+
+  .col-md-6,
+  .col-md-4 {
+    flex: 0 0 100%;
+    /* Stack cards 1 per row on mobile */
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
